@@ -32,12 +32,11 @@ print employee
 # employee["age"] = 30
 # print employee
 
-# if 'name' in employee.keys():
-# 	print "name", employee["name"]
+ if 'name' in employee.keys():
+ 	print "name", employee["name"]
 # ## Why don't we use / can't we use: 
-# 	# for key, value in employee.item(): 
-# else:
-# 	print "This key does not exist." 
+ 	# for key, value in employee.item(): 
+ else:	print "This key does not exist." 
 
 if 26 in employee:
 	## Why don't we use employee.keys(): here? we can just use employee?? 

@@ -1,3 +1,4 @@
+#import all_lists.txt 
 
 amazon = ["deodorant", "dish soap", "hand soap", "toilet paper"]
 whole_foods = ["salmon filets", "cantaloupe", "black grapes", "zucchini"]
@@ -6,7 +7,7 @@ bush_market = ["gochujang", "garlic bread", "vodka sauce", "red onion", "garlic"
 all_lists = {"amazon":amazon, "whole foods":whole_foods, "trader joes":trader_joes, "bush market":bush_market}
 
 def select_from_menu():
-	return "\nSelect one: \n0 - Main Menu \n1 - Show all lists \n2 - Show a specific list \n3 - Add a new shopping list \n4 - Add an item to a shopping list \n5 - Remove an item from a shopping list. \n6 - Remove a list by nickname. \n7 - Exit when you are done.\n"
+	return """\nSelect one: \n0 - Main Menu \n1 - Show all lists \n2 - Show a specific list \n3 - Add a new shopping list \n4 - Add an item to a shopping list \n5 - Remove an item from a shopping list.\n6 - Remove a list by nickname. \n7 - Exit when you are done.\n"""
 
 def show_all_lists():
 	return all_lists.items() 
@@ -49,14 +50,20 @@ def remove_item(list_to_remove, item_removed):
 
 def remove_list(delete_list_selection):
 	del all_lists[delete_list_selection.lower()]
-	return all_lists.items()
+	return all_lists.items() 
+
+#def write_to_lists(file_name):
+	#with open (file_name, mode="a") as my_file: 
+
+
+
  
 def main ():
 	while(True):
 		print select_from_menu()
 		selection = int(raw_input("Please select from the menu. "))
 		if selection == 0: 
-			print "Main Menu"
+			print "Main Menu\n"
 		elif selection == 1:
 			print "Show all lists:\n", show_all_lists()
 			print "----------------------"
