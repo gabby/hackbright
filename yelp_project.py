@@ -42,7 +42,7 @@ def main():
 
 
 if __name__ == '__main__':
-	main()
+	main() 
  
 # # #print pprint(dir(response))
 
@@ -55,6 +55,8 @@ if __name__ == '__main__':
 	# for info in all_contacts:
 	# 		if info.first_name == fname and info.last_name == lname:
 	# 			print(info.first_name, info.last_name, info.mobile_phone, info.home_p
+
+#there is a note in here 
 
 
 
