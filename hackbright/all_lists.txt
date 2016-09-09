@@ -1,5 +1,0 @@
-amazon = ["deodorant", "dish soap", "hand soap", "toilet paper"]
-whole_foods = ["salmon filets", "cantaloupe", "black grapes", "zucchini"]
-trader_joes = ["chicken dumplings", "organic brown eggs", "vodka pasta sauce", "pasta", "spaghetti squash"]
-bush_market = ["gochujang", "garlic bread", "vodka sauce", "red onion", "garlic"  ]
-all_lists = {"amazon":amazon, "whole foods":whole_foods, "trader joes":trader_joes, "bush market":bush_market} 
