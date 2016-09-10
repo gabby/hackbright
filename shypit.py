@@ -1,4 +1,4 @@
-#documentation: https://github.com/Yelp/yelp-python
+
 import json
 from pprint import pprint 
 from yelp.client import Client
@@ -11,42 +11,38 @@ with open('config_secret.json') as cred:
     auth = Oauth1Authenticator(**creds)
     client = Client(auth)
 
-# params = {
-#  	"limit": 20,
-#  	"location": "London, UK",
-#  	"term":"hotdogs"
-# }   
-
-# response = client.search(**params)
+params = {
+ 	"limit": 20,
+}   
 #print response
 #print response.businesses[18].name, response.businesses[18].location.display_address, response.businesses[18].display_phone
 #print response.businesses
 #print response.businesses[0].location.display_address
 
 #location, count, search_term=""
-# def add_params(keyword):
-# 	params["term"] = keyword
-# 	return params 
+designated_location = raw_input("From where address? ")
 
-def biz_info(response, num):
-	for entry in range(num):
-		print response.businesses[entry].name, response.businesses[entry].display_phone
-		print response.businesses[entry].location.display_address, "\n"
+response = client.search(designated_location, term="nail salon", **params)
+print params 
+print response.businesses[18].name, response.businesses[18].location.display_address, response.businesses[18].display_phone
 
-def main():
-	params = {}
-	search_term = raw_input("What do you want to search for: ")
-	params["term"]=search_term
-	num_entries = int(raw_input("How many entries do you need? "))
-	params["limit"]=num_entries
-	designated_location= raw_input("Where do you want the addresses from: ")
-	print params
-	response = client.search(designated_location, **params)
-	print "\n"
-	print biz_info(response, num_entries)
 
-if __name__ == '__main__':
-	main() 
+
+# def biz_info(num):
+# 	for entry in range(num):
+# 		print response.businesses[entry].name, response.businesses[entry].display_phone
+# 		print response.businesses[entry].location.display_address, "\n"
+
+# def main():
+# 	search_term = raw_input("Where do you want these addresses from: ")
+# 	print add_params(search_term)
+# 	num_entries = int(raw_input("How many entries do you need? "))
+# 	print "\n"
+# 	print biz_info(num_entries)
+
+
+# if __name__ == '__main__':
+# 	main() 
  
 # # #print pprint(dir(response))
 
@@ -61,6 +57,3 @@ if __name__ == '__main__':
 	# 			print(info.first_name, info.last_name, info.mobile_phone, info.home_p
 
 #there is a note in here 
-
-
-
