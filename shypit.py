@@ -22,7 +22,7 @@ params = {
 #location, count, search_term=""
 designated_location = raw_input("From where address? ")
 
-response = client.search(designated_location, term="nail salon", **params)
+response = client.search(designated_location, **params)
 print params 
 print response.businesses[18].name, response.businesses[18].location.display_address, response.businesses[18].display_phone
 
