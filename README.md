@@ -13,4 +13,12 @@ Review the documentation for the allowable inputs. Run this program in the pytho
 ## API Reference: 
 -----------------------------------------------------------
 [Yelp Developer Documentation - Search](https://www.yelp.com/developers/documentation/v2/search_api) 
+
 [Yelp Github Python Library](https://github.com/Yelp/yelp-python) 
+
+
+## Use: 
+---------------------------------------------------------
+- Keyword search will take entries separated by ',' but will not search for the keywords individually. This parameter takes one keyword string only
+- # of entries requested can be up to 20 only, however if you continue to query the same parameters, you will see the succeeding # of entries requested. (*You will continue to see new entries*). 
+- Location search can take entries separated by ','. Please note some countries will not return a response 
