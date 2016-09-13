@@ -2,13 +2,6 @@
 ========================================================
 Using the YELP API, this program displays a number (up to 20 at a time) of Yelp verified business names, addresses and phone numbers for the use in testing where valid addresses are needed around the world. 
 
-## Code Example: 
--------------------------------------------------------
-def biz_info(response, num):
-	for entry in range(num):
-		print response.businesses[entry].name, response.businesses[entry].display_phone
-		print response.businesses[entry].location.display_address, "\n"
-
 ## Purpose: 
 --------------------------------------------------------
 As a Quality Assurance engineer for a software that provides shipping and packaging options to businesses and consumers, I am often testing the generation of labels to residential and businesses addresses all around the world. To diversify our testing, I am frequently in need of random, but valid, information to enter as intended destionations. Other directories or resources require location inputs, typically, in longitude and latitude format. While Yelp's data is only verified by its community, it provides relatively reliable and valid addresses. 
